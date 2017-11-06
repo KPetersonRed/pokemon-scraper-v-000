@@ -15,7 +15,7 @@ def self.save(name, type, db)
 end
 
 # The find method creates a new Pokemon after selecting their row from the database by their id number.
-def self.find()
+def self.find(id, @db)
 
 
 
