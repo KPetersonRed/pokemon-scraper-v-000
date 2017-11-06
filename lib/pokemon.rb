@@ -16,7 +16,8 @@ end
 
 # The find method creates a new Pokemon after selecting their row from the database by their id number.
 def self.find(id, db)
-
+  pokemon_info = db.execute("SELECT * FROM pokemon WHERE id = ?", id).flatten
+  pokemon.new(id: pokemon_info[0], name: pokemon_info[1], type: pokemon_info[2], db: db)
 
 
 end
